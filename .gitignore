@@ -1,0 +1,18 @@
+.gradle/
+eclipse/
+.project
+.settings/org.eclipse.jdt.core.prefs
+build.bat
+build.gradle
+CREDITS-fml.txt
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+LICENSE-fml.txt
+MinecraftForge-Credits.txt
+forge-1.8-11.14.0.1281-1.8-changelog.txt
+MinecraftForge-License.txt
+README.txt
+setup eclipse.bat
+setup workspace.bat

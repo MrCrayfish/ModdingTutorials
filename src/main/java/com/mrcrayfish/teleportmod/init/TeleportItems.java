@@ -6,13 +6,14 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mrcrayfish.teleportmod.Reference;
+import com.mrcrayfish.teleportmod.TeleportMod;
 
 public class TeleportItems {
 	
 	public static Item coord_cache;
 	
 	public static void init() {
-		coord_cache = new Item().setUnlocalizedName("coord_cache");
+		coord_cache = new Item().setUnlocalizedName("coord_cache").setCreativeTab(TeleportMod.tabTeleport);
 	}
 	
 	public static void register()

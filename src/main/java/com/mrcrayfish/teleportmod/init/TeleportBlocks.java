@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.mrcrayfish.teleportmod.Reference;
+import com.mrcrayfish.teleportmod.TeleportMod;
 import com.mrcrayfish.teleportmod.blocks.BlockCoordTransporter;
 
 public class TeleportBlocks {
@@ -16,7 +17,7 @@ public class TeleportBlocks {
 	
 	public static void init()
 	{
-		coord_transporter = new BlockCoordTransporter(Material.cloth).setUnlocalizedName("coord_transporter");
+		coord_transporter = new BlockCoordTransporter(Material.cloth).setUnlocalizedName("coord_transporter").setCreativeTab(TeleportMod.tabTeleport);
 	}
 	
 	public static void register()

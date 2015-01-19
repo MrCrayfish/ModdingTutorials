@@ -1,28 +1,28 @@
-package com.mrcrayfish.tutorial.init;
+package com.mrcrayfish.teleportmod.init;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.mrcrayfish.tutorial.Reference;
+import com.mrcrayfish.teleportmod.Reference;
 
-public class TutorialItems {
+public class TeleportItems {
 	
-	public static Item test_item;
+	public static Item coord_cache;
 	
 	public static void init() {
-		test_item = new Item().setUnlocalizedName("test_item");
+		coord_cache = new Item().setUnlocalizedName("coord_cache");
 	}
 	
 	public static void register()
 	{
-		GameRegistry.registerItem(test_item, test_item.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(coord_cache, coord_cache.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
 	{
-		registerRender(test_item);
+		registerRender(coord_cache);
 	}
 	
 	public static void registerRender(Item item)

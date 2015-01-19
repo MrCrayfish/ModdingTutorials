@@ -1,4 +1,4 @@
-package com.mrcrayfish.tutorial.init;
+package com.mrcrayfish.teleportmod.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -7,26 +7,26 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.mrcrayfish.tutorial.Reference;
-import com.mrcrayfish.tutorial.blocks.BlockTest;
+import com.mrcrayfish.teleportmod.Reference;
+import com.mrcrayfish.teleportmod.blocks.BlockCoordTransporter;
 
-public class TutorialBlocks {
+public class TeleportBlocks {
 	
-	public static Block test_block;
+	public static Block coord_transporter;
 	
 	public static void init()
 	{
-		test_block = new BlockTest(Material.cloth).setUnlocalizedName("test_block");
+		coord_transporter = new BlockCoordTransporter(Material.cloth).setUnlocalizedName("coord_transporter");
 	}
 	
 	public static void register()
 	{
-		GameRegistry.registerBlock(test_block, test_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(coord_transporter, coord_transporter.getUnlocalizedName().substring(5));
 	}	
 	
 	public static void registerRenders()
 	{
-		registerRender(test_block);
+		registerRender(coord_transporter);
 	}
 	
 	public static void registerRender(Block block)

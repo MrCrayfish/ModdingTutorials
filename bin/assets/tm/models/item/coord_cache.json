@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "tm:items/test_item"
+        "layer0": "tm:items/coord_cache"
     },
     "display": {
         "thirdperson": {

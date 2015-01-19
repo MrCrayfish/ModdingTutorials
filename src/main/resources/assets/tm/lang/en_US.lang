@@ -1,2 +1,2 @@
-item.test_item.name=Test Item
-tile.test_block.name=Test Block
+item.coord_cache.name=Coordinate Cache
+tile.coord_teleporter.name=Coordinate Teleporter

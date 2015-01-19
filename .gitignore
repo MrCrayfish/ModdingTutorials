@@ -16,3 +16,5 @@ MinecraftForge-License.txt
 README.txt
 setup eclipse.bat
 setup workspace.bat
+bin/
+bin/assets/tm/lang/en_US.lang

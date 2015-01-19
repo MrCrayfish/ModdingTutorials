@@ -1,5 +1,5 @@
 {
-    "parent": "tm:block/test_block",
+    "parent": "tm:block/coord_transporter",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

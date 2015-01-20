@@ -2,10 +2,12 @@ package com.mrcrayfish.teleportmod.items;
 
 import java.util.List;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
@@ -25,6 +27,7 @@ public class ItemCoordinateCache extends Item
 				stack.setTagCompound(new NBTTagCompound());
 			}
 			NBTTagCompound nbt = new NBTTagCompound();
+			nbt.setInteger("dim", playerIn.dimension);
 			nbt.setInteger("posX", pos.getX());
 			nbt.setInteger("posY", pos.getY());
 			nbt.setInteger("posZ", pos.getZ());
@@ -56,11 +59,12 @@ public class ItemCoordinateCache extends Item
 		{
 			if(stack.getTagCompound().hasKey("coords"))
 			{
-				NBTTagCompound nbt = (NBTTagCompound)stack.getTagCompound().getTag("coords");
+				NBTTagCompound nbt = (NBTTagCompound) stack.getTagCompound().getTag("coords");
+				int dim = nbt.getInteger("dim");
 				int posX = nbt.getInteger("posX");
 				int posY = nbt.getInteger("posY");
 				int posZ = nbt.getInteger("posZ");
-				toolTip.add(EnumChatFormatting.DARK_GRAY + "X: " + EnumChatFormatting.GRAY + posX + EnumChatFormatting.DARK_GRAY +" Y: " + EnumChatFormatting.GRAY + posY + EnumChatFormatting.DARK_GRAY +" Z: " + EnumChatFormatting.GRAY +posZ);
+				toolTip.add("Dim: " + dim + " X: " + posX + " Y: " + posY + " Z: " + posZ);
 			}
 		}
 	}
@@ -73,6 +77,6 @@ public class ItemCoordinateCache extends Item
 		{
 			return stack.getTagCompound().hasKey("coords");
 		}
-        return false;
+		return false;
     }
 }

@@ -32,7 +32,7 @@ public class ItemCoordinateCache extends Item
 			nbt.setInteger("posY", pos.getY());
 			nbt.setInteger("posZ", pos.getZ());
 			stack.getTagCompound().setTag("coords", nbt);
-			stack.setStackDisplayName(EnumChatFormatting.AQUA + "Coordinate Cache");
+			stack.setStackDisplayName(EnumChatFormatting.DARK_PURPLE + "Coordinate Cache");
 		}
 		return false;
 	}

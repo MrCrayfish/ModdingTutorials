@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.mrcrayfish.teleportmod.init.TeleportBlocks;
 import com.mrcrayfish.teleportmod.init.TeleportItems;
+import com.mrcrayfish.teleportmod.init.TeleportTileEntities;
 import com.mrcrayfish.teleportmod.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
@@ -26,6 +27,7 @@ public class TeleportMod {
 		TeleportBlocks.register();
 		TeleportItems.init();
 		TeleportItems.register();
+		TeleportTileEntities.register();
 	}
 	
 	@EventHandler
